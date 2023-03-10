@@ -16,7 +16,7 @@ public class SfrApplication {
 
 	@Bean
 	public NewTopic topic() {
-		return TopicBuilder.name("recipes")
+		return TopicBuilder.name("recipe")
 				.partitions(10)
 				.replicas(1)
 				.build();
