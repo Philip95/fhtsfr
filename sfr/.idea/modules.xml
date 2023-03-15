@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/sfr.iml" filepath="$PROJECT_DIR$/.idea/sfr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sfr.sfr.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sfr.sfr.main.iml" />
     </modules>
   </component>
 </project>
