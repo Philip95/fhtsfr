@@ -16,7 +16,7 @@
     {
       "name": "description",
       "type": "string",
-        "doc": "Description of the recipe"
+      "doc": "Description of the recipe"
     },
     {
       "name": "ingredients",
