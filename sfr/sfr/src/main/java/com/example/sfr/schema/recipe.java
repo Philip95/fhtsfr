@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.baeldung.schema;
+package com.example.sfr.schema;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class recipe extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1270347308223866309L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"recipe\",\"namespace\":\"com.baeldung.schema\",\"fields\":[{\"name\":\"id\",\"type\":\"int\",\"doc\":\"Id of the recipe\"},{\"name\":\"name\",\"type\":\"string\",\"doc\":\"Name of the recipe\"},{\"name\":\"description\",\"type\":\"string\",\"doc\":\"Description of the recipe\"},{\"name\":\"ingredients\",\"type\":\"string\",\"doc\":\"Ingredients of the recipe\"},{\"name\":\"instructions\",\"type\":\"string\",\"doc\":\"Instructions of the recipe\"},{\"name\":\"evaluation\",\"type\":\"int\",\"doc\":\"Evaluation of the recipe\"},{\"name\":\"prepationTime\",\"type\":\"int\",\"doc\":\"Preparation time of the recipe\"},{\"name\":\"category\",\"type\":\"string\",\"doc\":\"Category of the recipe\"}]}");
+  private static final long serialVersionUID = 4427050757007639605L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"recipe\",\"namespace\":\"com.example.sfr.schema\",\"fields\":[{\"name\":\"id\",\"type\":\"int\",\"doc\":\"Id of the recipe\"},{\"name\":\"name\",\"type\":\"string\",\"doc\":\"Name of the recipe\"},{\"name\":\"description\",\"type\":\"string\",\"doc\":\"Description of the recipe\"},{\"name\":\"ingredients\",\"type\":\"string\",\"doc\":\"Ingredients of the recipe\"},{\"name\":\"instructions\",\"type\":\"string\",\"doc\":\"Instructions of the recipe\"},{\"name\":\"evaluation\",\"type\":\"int\",\"doc\":\"Evaluation of the recipe\"},{\"name\":\"prepationTime\",\"type\":\"int\",\"doc\":\"Preparation time of the recipe\"},{\"name\":\"category\",\"type\":\"string\",\"doc\":\"Category of the recipe\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -269,8 +269,8 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
    * Creates a new recipe RecordBuilder.
    * @return A new recipe RecordBuilder
    */
-  public static com.baeldung.schema.recipe.Builder newBuilder() {
-    return new com.baeldung.schema.recipe.Builder();
+  public static com.example.sfr.schema.recipe.Builder newBuilder() {
+    return new com.example.sfr.schema.recipe.Builder();
   }
 
   /**
@@ -278,8 +278,8 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
    * @param other The existing builder to copy.
    * @return A new recipe RecordBuilder
    */
-  public static com.baeldung.schema.recipe.Builder newBuilder(com.baeldung.schema.recipe.Builder other) {
-    return new com.baeldung.schema.recipe.Builder(other);
+  public static com.example.sfr.schema.recipe.Builder newBuilder(com.example.sfr.schema.recipe.Builder other) {
+    return new com.example.sfr.schema.recipe.Builder(other);
   }
 
   /**
@@ -287,8 +287,8 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
    * @param other The existing instance to copy.
    * @return A new recipe RecordBuilder
    */
-  public static com.baeldung.schema.recipe.Builder newBuilder(com.baeldung.schema.recipe other) {
-    return new com.baeldung.schema.recipe.Builder(other);
+  public static com.example.sfr.schema.recipe.Builder newBuilder(com.example.sfr.schema.recipe other) {
+    return new com.example.sfr.schema.recipe.Builder(other);
   }
 
   /**
@@ -323,7 +323,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.baeldung.schema.recipe.Builder other) {
+    private Builder(com.example.sfr.schema.recipe.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -363,7 +363,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
      * Creates a Builder by copying an existing recipe instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.baeldung.schema.recipe other) {
+    private Builder(com.example.sfr.schema.recipe other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -414,7 +414,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setId(int value) {
+    public com.example.sfr.schema.recipe.Builder setId(int value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -436,7 +436,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Id of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearId() {
+    public com.example.sfr.schema.recipe.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -456,7 +456,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'name'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setName(java.lang.CharSequence value) {
+    public com.example.sfr.schema.recipe.Builder setName(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.name = value;
       fieldSetFlags()[1] = true;
@@ -478,7 +478,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Name of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearName() {
+    public com.example.sfr.schema.recipe.Builder clearName() {
       name = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -499,7 +499,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'description'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setDescription(java.lang.CharSequence value) {
+    public com.example.sfr.schema.recipe.Builder setDescription(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.description = value;
       fieldSetFlags()[2] = true;
@@ -521,7 +521,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Description of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearDescription() {
+    public com.example.sfr.schema.recipe.Builder clearDescription() {
       description = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -542,7 +542,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'ingredients'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setIngredients(java.lang.CharSequence value) {
+    public com.example.sfr.schema.recipe.Builder setIngredients(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.ingredients = value;
       fieldSetFlags()[3] = true;
@@ -564,7 +564,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Ingredients of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearIngredients() {
+    public com.example.sfr.schema.recipe.Builder clearIngredients() {
       ingredients = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -585,7 +585,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'instructions'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setInstructions(java.lang.CharSequence value) {
+    public com.example.sfr.schema.recipe.Builder setInstructions(java.lang.CharSequence value) {
       validate(fields()[4], value);
       this.instructions = value;
       fieldSetFlags()[4] = true;
@@ -607,7 +607,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Instructions of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearInstructions() {
+    public com.example.sfr.schema.recipe.Builder clearInstructions() {
       instructions = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -628,7 +628,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'evaluation'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setEvaluation(int value) {
+    public com.example.sfr.schema.recipe.Builder setEvaluation(int value) {
       validate(fields()[5], value);
       this.evaluation = value;
       fieldSetFlags()[5] = true;
@@ -650,7 +650,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Evaluation of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearEvaluation() {
+    public com.example.sfr.schema.recipe.Builder clearEvaluation() {
       fieldSetFlags()[5] = false;
       return this;
     }
@@ -670,7 +670,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'prepationTime'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setPrepationTime(int value) {
+    public com.example.sfr.schema.recipe.Builder setPrepationTime(int value) {
       validate(fields()[6], value);
       this.prepationTime = value;
       fieldSetFlags()[6] = true;
@@ -692,7 +692,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Preparation time of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearPrepationTime() {
+    public com.example.sfr.schema.recipe.Builder clearPrepationTime() {
       fieldSetFlags()[6] = false;
       return this;
     }
@@ -712,7 +712,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'category'.
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder setCategory(java.lang.CharSequence value) {
+    public com.example.sfr.schema.recipe.Builder setCategory(java.lang.CharSequence value) {
       validate(fields()[7], value);
       this.category = value;
       fieldSetFlags()[7] = true;
@@ -734,7 +734,7 @@ public class recipe extends org.apache.avro.specific.SpecificRecordBase implemen
       * Category of the recipe
       * @return This builder.
       */
-    public com.baeldung.schema.recipe.Builder clearCategory() {
+    public com.example.sfr.schema.recipe.Builder clearCategory() {
       category = null;
       fieldSetFlags()[7] = false;
       return this;
