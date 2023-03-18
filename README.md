@@ -13,4 +13,20 @@ The application sends the messages to the kafka topic defined in the Main class.
 
 To see the messages you can use whatever you like. I used the Big Data Tool from IntelliJ. 
 
-With the exercise ongoing, there probably will be the ability to see the messages at the frontend.
+You can send a ```POST``` Request in Postman to ```http://localhost:8080/``` to send a message to the topic. With the following example
+body:
+
+```json
+{
+  "id":1,
+  "name":"Gulasch",
+  "description":"Guades Gulasch",
+  "ingredients":"Was i ned",
+  "instructions":"Kochs",
+  "evaluation":4,
+  "preparationTime":12,
+  "category":"Eintopf"
+}
+```
+
+Of course it's not perfect since ingredients should be a list, but I wanted to keep it simple and make it work in the first place.
