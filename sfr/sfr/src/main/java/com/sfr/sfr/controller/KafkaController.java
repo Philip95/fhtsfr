@@ -16,7 +16,7 @@ public class KafkaController {
         this.kafkaProducer = kafkaProducer;
     }
 
-    @PostMapping("/")
+    @PostMapping("/addMessage")
     public void send(@RequestBody RecipeModel model) {
         Recipe recipe = Recipe.newBuilder()
                 .setId(model.getId())
