@@ -1,6 +1,6 @@
 package com.sfr.sfr.kafka.stream;
 
-import com.sfr.sfr.model.AverageRating;
+import com.sfr.sfr.recipe.model.AverageRating;
 import jakarta.annotation.PostConstruct;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
@@ -11,8 +11,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.apache.kafka.streams.kstream.Consumed.as;
 
 
 @Component

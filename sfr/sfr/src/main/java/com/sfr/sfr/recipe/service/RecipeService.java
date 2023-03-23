@@ -1,6 +1,6 @@
-package com.sfr.sfr.service;
+package com.sfr.sfr.recipe.service;
 
-import com.sfr.sfr.repository.RecipeRepository;
+import com.sfr.sfr.recipe.repository.RecipeRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 @AllArgsConstructor

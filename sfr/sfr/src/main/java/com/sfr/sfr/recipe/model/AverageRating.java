@@ -1,4 +1,4 @@
-package com.sfr.sfr.model;
+package com.sfr.sfr.recipe.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

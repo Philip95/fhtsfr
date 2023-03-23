@@ -1,7 +1,7 @@
 package com.sfr.sfr.kafka.controller;
 
 import com.sfr.sfr.kafka.producer.KafkaProducer;
-import com.sfr.sfr.model.RecipeModel;
+import com.sfr.sfr.recipe.model.RecipeModel;
 import com.sfr.sfr.kafka.schema.Recipe;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

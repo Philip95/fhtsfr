@@ -1,4 +1,4 @@
-package com.sfr.sfr.model;
+package com.sfr.sfr.recipe.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

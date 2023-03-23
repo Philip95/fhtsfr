@@ -1,6 +1,6 @@
-package com.sfr.sfr.controller;
+package com.sfr.sfr.recipe.controller;
 
-import com.sfr.sfr.service.RecipeService;
+import com.sfr.sfr.recipe.service.RecipeService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
