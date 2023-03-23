@@ -32,4 +32,5 @@ One of the reasons I chose PostgreSQL is because I would say, in my case it is b
 because recipes always look the same. I don't expect a lot of different data structures, so I don't see the need of a 
 NoSQL database, but even when I would need it, PostgreSQL support a bit of NoSQL features, which doesn't mean, that it is
 a NoSQL database or can replace it.
-Furthermore, PostgreSQL works smoothly with Spring Boot, since I just need to add the configuration. 
+Furthermore, PostgreSQL works smoothly with Spring Boot, since I just need to add the configuration. Also it can hanlde 
+JSON and array values. 
