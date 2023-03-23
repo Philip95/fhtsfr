@@ -1,7 +1,7 @@
-package com.sfr.sfr.producer;
+package com.sfr.sfr.kafka.producer;
 
 
-import com.sfr.sfr.schema.Recipe;
+import com.sfr.sfr.kafka.schema.Recipe;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;

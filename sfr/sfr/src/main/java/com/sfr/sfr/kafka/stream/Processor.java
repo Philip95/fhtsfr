@@ -1,4 +1,4 @@
-package com.sfr.sfr.stream;
+package com.sfr.sfr.kafka.stream;
 
 import com.sfr.sfr.model.AverageRating;
 import jakarta.annotation.PostConstruct;
