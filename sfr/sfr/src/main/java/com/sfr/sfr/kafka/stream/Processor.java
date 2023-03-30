@@ -1,7 +1,12 @@
 package com.sfr.sfr.kafka.stream;
 
+import com.sfr.sfr.kafka.RecipeSerdes;
+import com.sfr.sfr.kafka.schema.Recipe;
 import com.sfr.sfr.recipe.model.AverageRating;
 import jakarta.annotation.PostConstruct;
+//import org.springframework.cloud.stream.messaging.Processor;
+
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -14,6 +19,7 @@ import java.util.List;
 
 
 @Component
+@Slf4j
 public class Processor {
 
     private static final Serde<String> STRING_SERDE = Serdes.String();
@@ -21,6 +27,7 @@ public class Processor {
 
     @Autowired
     private StreamsBuilder streamsBuilder;
+
     /*
     @PostConstruct
     void buildPipeline() {
@@ -34,25 +41,23 @@ public class Processor {
     }
     */
 
-    @PostConstruct
+    @Autowired
     void buildRightPipeline() {
 
-        KStream<String, Integer> messageStream = streamsBuilder
-                .stream("recipe", Consumed.with(STRING_SERDE, INTEGER_SERDE));
-        /*
-        KTable<String, String> messageTable = messageStream
-                .groupByKey(Grouped.with(STRING_SERDE, INTEGER_SERDE))
+        KStream<String, Recipe> messageStream = streamsBuilder
+                .stream("recipe", Consumed.with(STRING_SERDE, RecipeSerdes.serdes()))
+                .peek((key, value) -> log.info("key: " + key + " value: " + value));
+
+        KTable<String, AverageRating> messageTable = messageStream
+                .groupByKey(Grouped.with(STRING_SERDE, RecipeSerdes.serdes()))
                 .aggregate(Processor::getAggregator, (key, value, aggregate) -> {
-                    //addRating(aggregate, value);
-                    //aggregate += value;
-                    //return aggregate;
+                    addRating(aggregate, value);
                     return aggregate;
-                }, Materialized.as("recipe-table")
-                        .withValueSerde(Serdes.Integer()));
+                }, Materialized.as("recipe-table"));
 
 
-        messageTable.toStream().to("recipe-table", Produced.with(STRING_SERDE, STRING_SERDE));
-        */
+        //messageTable.toStream().to("recipe-table", Produced.with(STRING_SERDE, STRING_SERDE));
+
     }
 
     private static void setNewAverageRating(AverageRating aggregate) {
@@ -61,9 +66,9 @@ public class Processor {
         aggregate.setAverageRating(averageRating);
     }
 
-    private static void addRating(AverageRating aggregate, Integer value) {
+    private static void addRating(AverageRating aggregate, Recipe value) {
         List<Double> averagePrice = aggregate.getAverageRatingList();
-        averagePrice.add(value.doubleValue());
+        averagePrice.add(value.getEvaluation().doubleValue());
         aggregate.setAverageRatingList(averagePrice);
     }
 
