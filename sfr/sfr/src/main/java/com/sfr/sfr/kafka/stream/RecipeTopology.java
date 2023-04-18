@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class RecipeTopology {
 
     private static final Serde<String> STRING_SERDE = Serdes.String();
-    private static final Serde<Integer> INTEGER_SERDE = Serdes.Integer();
     private static final Serde<Recipe> RECIPE_SERDE = RecipeSerdes.serdes();
 
     public static KStream<String, Long> getRecipekStream(StreamsBuilder streamsBuilder) {
