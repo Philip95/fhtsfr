@@ -1,0 +1,15 @@
+{
+  "namespace": "com.sfr.sfr.kafka.schema",
+  "type": "record",
+  "name": "AverageRating",
+  "fields": [
+    {
+      "name": "count",
+      "type": "long"
+    },
+    {
+      "name": "sum",
+      "type": "double"
+    }
+  ]
+}

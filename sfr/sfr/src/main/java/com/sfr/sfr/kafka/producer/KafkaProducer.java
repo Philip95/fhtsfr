@@ -3,6 +3,7 @@ package com.sfr.sfr.kafka.producer;
 
 import com.sfr.sfr.kafka.schema.Recipe;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.avro.specific.SpecificRecordBase;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -18,18 +19,17 @@ public class KafkaProducer {
     }
 
     public void send(Recipe recipe) {
-        producer.send(topicName, String.valueOf(recipe.getId()), recipe)
-                .whenComplete((result, exception) -> {
-                    if (exception != null) {
-                        log.error("Failed to produce to kafka", exception);
-                    } else {
-                        log.info("Produced record to topic {} partition {} @ offset {}",
-                                result.getRecordMetadata().topic(),
-                                result.getRecordMetadata().partition(),
-                                result.getRecordMetadata().offset());
-                    }
-                });
-        producer.flush();
+        if (recipe != null) {
+            this.producer.send(topicName, String.valueOf(recipe.getId()), recipe)
+                    .whenComplete((result, exception) -> {
+                        if (exception != null) {
+                            log.error("Failed to produce to kafka", exception);
+                        } else {
+                            log.info("Produced record to topic {} partition {} @ offset {}, recipe {}", result.getRecordMetadata().topic(), result.getRecordMetadata().partition(), result.getRecordMetadata().offset(), recipe);
+                        }
+                    });
+        }
+        this.producer.flush();
     }
 
 }

@@ -1,7 +1,7 @@
 {
   "type": "record",
   "name": "Recipe",
-  "namespace": "com.example.sfr.schema",
+  "namespace": "com.sfr.sfr.kafka.schema",
   "fields": [
     {
       "name": "id",
@@ -30,7 +30,7 @@
     },
     {
       "name": "evaluation",
-      "type": "int",
+      "type": "long",
       "doc": "Evaluation of the recipe"
     },
     {
@@ -42,5 +42,6 @@
       "name": "category",
       "type": "string",
       "doc": "Category of the recipe"
-    }]
+    }
+  ]
 }

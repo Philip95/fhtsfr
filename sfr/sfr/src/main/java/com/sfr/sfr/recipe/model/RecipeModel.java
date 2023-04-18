@@ -27,7 +27,7 @@ public class RecipeModel {
     @Column(nullable = false)
     private String instructions;
     @Column
-    private int evaluation;
+    private long evaluation;
     @Column
     private int preparationTime;
     @Column

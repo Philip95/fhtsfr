@@ -4,7 +4,7 @@ buildscript {
 		jcenter()
 	}
 	dependencies {
-		classpath 'com.commercehub.gradle.plugin:gradle-avro-plugin:0.15.1'
+		classpath 'com.commercehub.gradle.plugin:gradle-avro-plugin:0.18.0'
 	}
 }
 
@@ -12,6 +12,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.0.4'
 	id 'io.spring.dependency-management' version '1.1.0'
+	id "com.github.davidmc24.gradle.plugin.avro" version "1.6.0"
 }
 
 group = 'com.sfr'
@@ -19,6 +20,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
 repositories {
+	gradlePluginPortal()
+	mavenCentral()
 	jcenter()
 
 	maven {
@@ -26,7 +29,7 @@ repositories {
 	}
 }
 
-apply plugin: 'com.commercehub.gradle.plugin.avro'
+
 apply plugin: 'idea'
 
 dependencies {
@@ -58,7 +61,7 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-stream', version: '4.0.1'
-
+	implementation "org.apache.avro:avro:1.11.0"
 
 }
 

@@ -1,8 +1,8 @@
 package com.sfr.sfr.kafka.controller;
 
 import com.sfr.sfr.kafka.producer.KafkaProducer;
-import com.sfr.sfr.recipe.model.RecipeModel;
 import com.sfr.sfr.kafka.schema.Recipe;
+import com.sfr.sfr.recipe.model.RecipeModel;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StoreQueryParameters;
 import org.apache.kafka.streams.state.QueryableStoreTypes;
