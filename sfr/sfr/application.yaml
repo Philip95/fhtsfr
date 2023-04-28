@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Philip95/fhtsfr.git
     targetRevision: HEAD
-    path: deployment
+    path: fhtsfr/sfr/sfr/deployment
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
