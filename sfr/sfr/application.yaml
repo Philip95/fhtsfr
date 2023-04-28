@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sfr_project
+  name: sfr
   namespace: argocd
 spec:
   project: default
