@@ -68,7 +68,14 @@ Sync Status:        Synced to  (5ad0cb8)
 Health Status:      Healthy
 ```
 
-Die Dokumetnation sieht eigentlich noch einen Schritt vor, um das Projekt zu syncen, allerdings scheint es hier schon
+Die Dokumentation sieht eigentlich noch einen Schritt vor, um das Projekt zu syncen, allerdings scheint es hier schon
 gesynct zu sein. Vielleicht passiert das nach einer gewissen Zeit automatisch, da ich auch währenddessen ArgoCD neu 
 starten musste, da es mir den Port Forwarder zerschossen hat. Allerdings hat der Neustart dazu geführt, dass die Argo UI 
 schlussendlich funktioniert. 
+
+Schlussendlich hab ich gesehen, dass es keine Pods oder ähnliches gab und habe daher die yaml Files angelegt und mittels
+```kubectl apply -f application.yaml``` manuell angestartet, was folgendes Ergebnis lieferte:
+
+![img.png](img.png)
+
+Der Fehler, wieso die Pods nicht gestartet werden konnten war/ist ein Fehler im Docker Image, den ich bis jetzt nicht beheben konnte.
