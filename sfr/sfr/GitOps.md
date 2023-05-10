@@ -79,3 +79,9 @@ Schlussendlich hab ich gesehen, dass es keine Pods oder ähnliches gab und habe 
 ![img.png](img.png)
 
 Der Fehler, wieso die Pods nicht gestartet werden konnten war/ist ein Fehler im Docker Image, den ich bis jetzt nicht beheben konnte.
+
+Manuelles Starten:
+```kubectl apply -f application.yaml```
+
+Port forwarding:
+```kubectl port-forward svc/argocd-server -n argocd 8080:443```
